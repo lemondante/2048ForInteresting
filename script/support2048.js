@@ -8,3 +8,10 @@ function getPosTop(i,j) {
 function getPosLeft(i,j) {
     return 20 + j * 120;
 }
+
+function getNumberBackgroundColor(number) {
+    switch (number){
+        case 2:
+            return
+    }
+}

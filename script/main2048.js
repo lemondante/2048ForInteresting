@@ -52,6 +52,9 @@ function updateBoardView() {
                 theNumberCell.css('height','0px');
                 theNumberCell.css('top',getPosTop(i,j));
                 theNumberCell.css('left',getPosLeft(i,j));
+                theNumberCell.css('background-color',getNumberBackgroundColor(board[i][j]));
+                theNumberCell.css('color',getNumberColor(board[i][j]));
+                theNumberCell.text(board([i][j]));
             }
         }
 

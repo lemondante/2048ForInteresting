@@ -1,3 +1,8 @@
+body{
+    display: block;
+    background-color: white;
+}
+
 header{
     display: block;
     margin:0 auto;
