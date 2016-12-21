@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>2048</title>
     <link rel="stylesheet" type="text/css" href="style/2048.css">
-    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
     <script type="text/javascript" src="script/main2048.js"></script>
     <script type="text/javascript" src="script/show.js"></script>
     <script type="text/javascript" src="script/support2048.js"></script>
@@ -12,9 +12,13 @@
 </head>
 <body onload="changeColor()">
 
+    <div>
+        <a id="StopButton" href=javascript:StopChangeColor()>Stop Change Colour</a>
+    </div>
+
     <header>
-        <h1>2048</h1>
-        <a id="newgamebutton"> New Name</a>
+        <h1 id="Header1">2048</h1>
+        <a id="newgamebutton" href="javascript:newgame()"> New Name</a>
         <p>score:<span id="score">0</span></p>
     </header>
 

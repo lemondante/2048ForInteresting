@@ -10,22 +10,29 @@ header{
     text-align: center;
 }
 
+#Header1{
+    padding:10px;
+    height: 50px;
+}
+
 header h1{
     font-family:Arial;
     font-size:60px;
     font-weight:bold;
+    color: white;
+    padding:10px;
 }
 
 header #newgamebutton{
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
 
     width: 100px;
     padding: 10px 10px;
-    background-color: #8f7a66;
+    background-color: greenyellow;
 
     font-family:Arial;
-    color: white;
+    color: crimson;
 
     border-radius:10px;
 
@@ -33,13 +40,30 @@ header #newgamebutton{
 }
 
 header #newgamebutton:hover{
-    background-color: #9f8b77;
+    background-color: #B3EE3A;
 }
 
 header p{
     font-family:Arial;
     font-size: 25px;
-    margin:20px auto;
+    margin:10px auto;
+}
+
+#StopButton {
+    padding:10px 10px;
+    width:200px;
+    display: block;
+    border-radius: 10px;
+    background-color: #F5F7B6;
+    color: black;
+    margin: 10px 10px auto auto;
+    text-decoration: none;
+    outline:none;
+    text-align: center;
+}
+
+#StopButton:hover{
+    background-color: #F5F7DE;
 }
 
 #grid-container {
