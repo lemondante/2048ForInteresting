@@ -24,7 +24,7 @@ function StopChangeColor() {
     document.body.style.backgroundColor = 'black';
     JSheader1.style.color = 'crimson';
     JSheader1.style.fontSize = '350px';
-    setTimeout("fontSizeBack()",500);
+    setTimeout("fontSizeBack()",2000);
 }
 
 function fontSizeBack() {

@@ -108,6 +108,7 @@ function getNumberColor( number ) {
             break;
 
         case 1024:
+
             return "#FF8C00";
             break;
 
@@ -125,6 +126,67 @@ function getNumberColor( number ) {
 
         case 16384:
             return "#000000";
+            break;
+    }
+}
+
+function getNumberFontSize(number){
+    switch (number){
+        case 2:
+            return "60px";
+            break;
+
+        case 4:
+            return "60px";
+            break;
+
+        case 8:
+            return "60px";
+            break;
+
+        case 16:
+            return "60px";
+            break;
+
+        case 32:
+            return "60px";
+            break;
+
+        case 64:
+            return "60px";
+            break;
+
+        case 128:
+            return "60px";
+            break;
+
+        case 256:
+            return "60px";
+            break;
+
+        case 512:
+            return "60px";
+            break;
+
+        case 1024:
+
+            return "45px";
+            break;
+
+        case 2048:
+            return "45px";
+            break;
+
+        case 4096:
+            return "45px";
+            break;
+
+        case 8192:
+            return "45px";
+            break;
+
+        case 16384:
+            return "35px";
             break;
     }
 }

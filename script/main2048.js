@@ -61,6 +61,7 @@ function updateBoardView() {
                 theNumberCell.css('left',getPosLeft(i,j));
                 theNumberCell.css('background-color',getNumberBackgroundColor(board[i][j]));
                 theNumberCell.css('color',getNumberColor(board[i][j]));
+                theNumberCell.css('font-size',getNumberFontSize(board[i][j]))
                 theNumberCell.text(board[i][j]);
             }
             hasConflicted[i][j] = false;
@@ -77,20 +78,34 @@ function generateOneNumber() {
     var randx =parseInt( Math.floor(Math.random() * 4));
     var randy =parseInt( Math.floor(Math.random() * 4));
 
-    while (true){
-        if (board[randx][randy] === 0){
+    var times = 0;
+    var PauseCircle = false;
+    while( times < 50 ){
+        if( board[randx][randy] === 0 )
             break;
-        }
-        randx =parseInt( Math.floor(Math.random() * 4));
-        randy =parseInt( Math.floor(Math.random() * 4));
+
+        randx = parseInt( Math.floor( Math.random()  * 4 ) );
+        randy = parseInt( Math.floor( Math.random()  * 4 ) );
+
+        times ++;
+    }
+    if( times === 50 ){
+        for( var i = 0 ; i < 4&& PauseCircle === true ; i ++ )
+            for( var j = 0 ; j < 4 ; j ++ ){
+                if( board[i][j] === 0 ){
+                    randx = i;
+                    randy = j;
+                    PauseCircle = true;
+                }
+            }
     }
 
-    var randNumber = (Math.random()< 0.9? 2:4);
+    var randNumber = (Math.random()< 0.9? 2: 4);
 
     board[randx][randy] = randNumber;
 
     shouNumberWithAnimation(randx,randy,randNumber);
-
+    updateBoardView()
     return true;
 
 }
@@ -152,7 +167,7 @@ function moveLeft() {
                             board[i][j] = 0;
                             score += board[i][k];
                             updateScore(score);
-                            hasConflicted[k][j] = true;
+                            hasConflicted[i][k] = true;
                             continue;
                         }
                     }
@@ -220,7 +235,7 @@ function moveRight() {
                             board[i][j] = 0;
                             score += board[i][k];
                             updateScore(score);
-                            hasConflicted[k][j] = true;
+                            hasConflicted[i][k] = true;
                             continue;
                         }
                     }
