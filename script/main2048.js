@@ -291,5 +291,5 @@ function isgameover() {
 }
 
 function gameover() {
-    alert("GG!");
+    frightenYou();
 }
